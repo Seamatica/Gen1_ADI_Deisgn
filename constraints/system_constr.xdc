@@ -1,7 +1,9 @@
 # constraints
+set_property -dict {PACKAGE_PIN AE22 IOSTANDARD LVDS_25} [get_ports ref_clk_p]
+set_property -dict {PACKAGE_PIN AF22 IOSTANDARD LVDS_25} [get_ports ref_clk_n]
+
 
 # ad9361 0
-
 set_property -dict {PACKAGE_PIN AF14 IOSTANDARD LVDS_25 DIFF_TERM 1} [get_ports rx_clk_in_0_p]
 set_property -dict {PACKAGE_PIN AG14 IOSTANDARD LVDS_25 DIFF_TERM 1} [get_ports rx_clk_in_0_n]
 set_property -dict {PACKAGE_PIN AA15 IOSTANDARD LVDS_25 DIFF_TERM 1} [get_ports rx_frame_in_0_p]
