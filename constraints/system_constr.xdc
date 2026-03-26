@@ -158,7 +158,7 @@ create_clock -period 4.000 -name rx_1_clk [get_ports rx_clk_in_1_p]
 #create_clock -period 4.000 -name ref_clk [get_ports ref_clk_p]
 #create_clock -period 25.000 -name ref_clk [get_ports ref_clk_n]
 
-#set_clock_groups -asynchronous -group [get_clocks rx_0_clk] -group [get_clocks rx_1_clk]
+set_clock_groups -asynchronous -group [get_clocks rx_0_clk] -group [get_clocks rx_1_clk]
 
 
 
