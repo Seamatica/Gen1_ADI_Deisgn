@@ -62,14 +62,6 @@ module system_top (
 
 //  inout       [ 14:0]     gpio_bd,
 
-//  output                  hdmi_out_clk,
-//  output                  hdmi_vsync,
-//  output                  hdmi_hsync,
-//  output                  hdmi_data_e,
-//  output      [ 23:0]     hdmi_data,
-//  output                  spdif,
-//  inout                   iic_scl,
-//  inout                   iic_sda,
 
 // ad9361 master
   input                   rx_clk_in_0_p,
@@ -273,25 +265,7 @@ module system_top (
     .gpio_i (gpio_i),
     .gpio_o (gpio_o),
     .gpio_t (gpio_t),
-//    .hdmi_data (hdmi_data),
-//    .hdmi_data_e (hdmi_data_e),
-//    .hdmi_hsync (hdmi_hsync),
-//    .hdmi_out_clk (hdmi_out_clk),
-//    .hdmi_vsync (hdmi_vsync),
-//    .iic_main_scl_io (iic_scl),
-//    .iic_main_sda_io (iic_sda),
-    .hdmi_data (),
-    .hdmi_data_e (),
-    .hdmi_hsync (),
-    .hdmi_out_clk (),
-    .hdmi_vsync (),
 
-    .iic_mux_scl_i (),
-    .iic_mux_scl_o (),
-    .iic_mux_scl_t (),
-    .iic_mux_sda_i (),
-    .iic_mux_sda_o (),
-    .iic_mux_sda_t (),
     
     .rx_clk_in_0_n (rx_clk_in_0_n),
     .rx_clk_in_0_p (rx_clk_in_0_p),
@@ -305,8 +279,7 @@ module system_top (
     .rx_frame_in_0_p (rx_frame_in_0_p),
     .rx_frame_in_1_n (rx_frame_in_1_n),
     .rx_frame_in_1_p (rx_frame_in_1_p),
-//    .spdif (spdif),
-    .spdif (),
+
     
     .spi0_clk_i (spi0_clk),
     .spi0_clk_o (spi0_clk),

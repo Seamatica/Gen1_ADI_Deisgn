@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-//Date        : Mon Jan 26 11:26:12 2026
+//Date        : Fri Mar 27 13:26:50 2026
 //Host        : DESKTOP-V4M9N49 running 64-bit major release  (build 9200)
 //Command     : generate_target system_wrapper.bd
 //Design      : system_wrapper
@@ -36,17 +36,7 @@ module system_wrapper
     gpio_i,
     gpio_o,
     gpio_t,
-    hdmi_data,
-    hdmi_data_e,
-    hdmi_hsync,
-    hdmi_out_clk,
-    hdmi_vsync,
-    iic_mux_scl_i,
-    iic_mux_scl_o,
-    iic_mux_scl_t,
-    iic_mux_sda_i,
-    iic_mux_sda_o,
-    iic_mux_sda_t,
+    otg_vbusoc,
     rx_clk_in_0_n,
     rx_clk_in_0_p,
     rx_clk_in_1_n,
@@ -59,7 +49,6 @@ module system_wrapper
     rx_frame_in_0_p,
     rx_frame_in_1_n,
     rx_frame_in_1_p,
-    spdif,
     spi0_clk_i,
     spi0_clk_o,
     spi0_csn_0_o,
@@ -123,17 +112,7 @@ module system_wrapper
   input [63:0]gpio_i;
   output [63:0]gpio_o;
   output [63:0]gpio_t;
-  output [23:0]hdmi_data;
-  output hdmi_data_e;
-  output hdmi_hsync;
-  output hdmi_out_clk;
-  output hdmi_vsync;
-  input [1:0]iic_mux_scl_i;
-  output [1:0]iic_mux_scl_o;
-  output iic_mux_scl_t;
-  input [1:0]iic_mux_sda_i;
-  output [1:0]iic_mux_sda_o;
-  output iic_mux_sda_t;
+  input otg_vbusoc;
   input rx_clk_in_0_n;
   input rx_clk_in_0_p;
   input rx_clk_in_1_n;
@@ -146,7 +125,6 @@ module system_wrapper
   input rx_frame_in_0_p;
   input rx_frame_in_1_n;
   input rx_frame_in_1_p;
-  output spdif;
   input spi0_clk_i;
   output spi0_clk_o;
   output spi0_csn_0_o;
@@ -211,17 +189,7 @@ module system_wrapper
   wire [63:0]gpio_i;
   wire [63:0]gpio_o;
   wire [63:0]gpio_t;
-  wire [23:0]hdmi_data;
-  wire hdmi_data_e;
-  wire hdmi_hsync;
-  wire hdmi_out_clk;
-  wire hdmi_vsync;
-  wire [1:0]iic_mux_scl_i;
-  wire [1:0]iic_mux_scl_o;
-  wire iic_mux_scl_t;
-  wire [1:0]iic_mux_sda_i;
-  wire [1:0]iic_mux_sda_o;
-  wire iic_mux_sda_t;
+  wire otg_vbusoc;
   wire rx_clk_in_0_n;
   wire rx_clk_in_0_p;
   wire rx_clk_in_1_n;
@@ -234,7 +202,6 @@ module system_wrapper
   wire rx_frame_in_0_p;
   wire rx_frame_in_1_n;
   wire rx_frame_in_1_p;
-  wire spdif;
   wire spi0_clk_i;
   wire spi0_clk_o;
   wire spi0_csn_0_o;
@@ -300,17 +267,7 @@ module system_wrapper
         .gpio_i(gpio_i),
         .gpio_o(gpio_o),
         .gpio_t(gpio_t),
-        .hdmi_data(hdmi_data),
-        .hdmi_data_e(hdmi_data_e),
-        .hdmi_hsync(hdmi_hsync),
-        .hdmi_out_clk(hdmi_out_clk),
-        .hdmi_vsync(hdmi_vsync),
-        .iic_mux_scl_i(iic_mux_scl_i),
-        .iic_mux_scl_o(iic_mux_scl_o),
-        .iic_mux_scl_t(iic_mux_scl_t),
-        .iic_mux_sda_i(iic_mux_sda_i),
-        .iic_mux_sda_o(iic_mux_sda_o),
-        .iic_mux_sda_t(iic_mux_sda_t),
+        .otg_vbusoc(otg_vbusoc),
         .rx_clk_in_0_n(rx_clk_in_0_n),
         .rx_clk_in_0_p(rx_clk_in_0_p),
         .rx_clk_in_1_n(rx_clk_in_1_n),
@@ -323,7 +280,6 @@ module system_wrapper
         .rx_frame_in_0_p(rx_frame_in_0_p),
         .rx_frame_in_1_n(rx_frame_in_1_n),
         .rx_frame_in_1_p(rx_frame_in_1_p),
-        .spdif(spdif),
         .spi0_clk_i(spi0_clk_i),
         .spi0_clk_o(spi0_clk_o),
         .spi0_csn_0_o(spi0_csn_0_o),
