@@ -3,7 +3,7 @@
 ### Run these Commands in CMD prompt one by one within this directory:
 - "C:\Xilinx\Vivado\2019.1\settings64.bat" && vivado -mode tcl
     - Find your specific path for settings64.bat   
-- source Gen1_ADI_Design.tcl
+- source gen1_separate_sdr.tcl
 
 Resolve lwip compatibility
 - Right click bsp folder, select Board Support Package Settings, tick lwip211 (Version 1.5).
